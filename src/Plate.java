@@ -21,27 +21,14 @@ public class Plate {
         }
     }
 
-       /* int proverka = food - cumma;
-        if (proverka < 0)
-            return true;
-        food -= cumma;
-            return false;
+    @Override
+    public String toString() {
+        return "Plate{" +
+                "food=" + food +
+                ", eheJratvi=" + eheJratvi +
+                ", proverbEdy=" + proverbEdy +
+                '}';
     }
-        */
-
-
-
-
-        /*{
-            (food <= 0) {
-        } else{
-        }
-            food -= cumma;
-        }
-         */
-
-
-
 
     public void plusFood() { // добавить еды
         this.food += eheJratvi;
@@ -49,19 +36,14 @@ public class Plate {
     }
 
     public boolean proverkaFood(int e) { // проверка еды
-        if (food - e > proverbEdy) {
+        if (food - e >= 0) {
             food -= e;
             return true;
         } else {
-            System.out.println("нет еды в кормушке!");
+            System.out.println("нет еды в кормушке! чтобы полностью поесть");
             return false;
         }
-
-
-        //if(proverbEdy < 0)
-                //return (food - e) >= proverbEdy;
-        //else
-        //return false;
     }
-    }
+
+}
 
